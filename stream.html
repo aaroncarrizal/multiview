@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #stream {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="stream" src="" frameborder="0" allowfullscreen></iframe>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        ipcRenderer.on('load-stream', (event, streamURL) => {
+            document.getElementById('stream').src = streamURL;
+        });
+    </script>
+</body>
+
+</html>
+

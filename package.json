@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "linter-fix" : "npx standard --fix"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
   "description": "",
   "devDependencies": {
     "electron": "^32.0.2"
+  },
+  "dependencies": {
+    "standard": "^17.1.2"
   }
 }
